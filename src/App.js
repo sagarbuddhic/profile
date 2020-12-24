@@ -1,18 +1,17 @@
-
 // this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from '@emotion/react';
-import { motion } from 'framer-motion';
+import { css, jsx } from "@emotion/react";
+import { motion } from "framer-motion";
 import "./App.css";
-import * as styles from './App.style';
-import sagar from './SAGAR_3.jpg';
+import * as styles from "./App.style";
+import sagar from "./SAGAR_3.jpg";
 
 const variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.5, when: 'beforeChildren' },
+    transition: { staggerChildren: 0.5, when: "beforeChildren" },
   },
 };
 
@@ -41,37 +40,36 @@ function App() {
   return (
     <div css={styles.container}>
       <div css={styles.banner}>
-      <div css={styles.imageWrapper}>
-        <motion.img
-          animate={{x: 50, y: 50, rotate: 360}}
-          transition={{ duration: 2 }}
-          // variants={variants}
-          // drag
-          // dragConstraints={{
-          //   top: -10,
-          //   left: -10,
-          //   right: 100,
-          //   bottom: 50,
-          // }}
-          // dragElastic={1}
-          css={styles.circle}
-          src={sagar}
-          alt="sagar"
-        >
-        </motion.img>
-        <span css={styles.name}>
-        {[...name].map((char, index) => {
-  
-          return (<span
+        <div css={styles.imageWrapper}>
+          <motion.img
+            animate={{ x: 50, y: 50, rotate: 360 }}
+            transition={{ duration: 2 }}
+            // variants={variants}
+            // drag
+            // dragConstraints={{
+            //   top: -10,
+            //   left: -10,
+            //   right: 100,
+            //   bottom: 50,
+            // }}
+            // dragElastic={1}
+            css={styles.circle}
+            src={sagar}
+            alt="sagar"
+          ></motion.img>
+          <span css={styles.name}>
+            {[...name].map((char, index) => {
+              return (
+                <span
                   aria-hidden="true"
                   key={index}
                   css={styles.nameLetters(index)}
                 >
                   {char}
-                </span>);
-                })
-        }
-        </span>
+                </span>
+              );
+            })}
+          </span>
         </div>
       </div>
       <div css={styles.content}>
@@ -88,7 +86,13 @@ function App() {
             css={styles.button}
             custom="1"
           >
-            <a href="https://stackoverflow.com/users/2951503/sagar-buddhi" css={styles.links} type="button">Stackoverflow</a>
+            <a
+              href="https://stackoverflow.com/users/2951503/sagar-buddhi"
+              css={styles.links}
+              type="button"
+            >
+              Stackoverflow
+            </a>
           </motion.div>
           <motion.div
             initial="hidden"
@@ -97,7 +101,13 @@ function App() {
             css={styles.button}
             custom="2"
           >
-            <a href="https://www.linkedin.com/in/sagar-buddhi-7a187037/" css={styles.links} type="button">Linkedin</a>
+            <a
+              href="https://www.linkedin.com/in/sagar-buddhi-7a187037/"
+              css={styles.links}
+              type="button"
+            >
+              Linkedin
+            </a>
           </motion.div>
           <motion.div
             initial="hidden"
@@ -106,11 +116,16 @@ function App() {
             css={styles.button}
             custom="3"
           >
-            <a href="https://github.com/sagarbuddhic" type="button" css={styles.links}>Github</a>
+            <a
+              href="https://github.com/sagarbuddhic"
+              type="button"
+              css={styles.links}
+            >
+              Github
+            </a>
           </motion.div>
         </motion.div>
-        <div>
-        </div>
+        <div></div>
       </div>
     </div>
   );
