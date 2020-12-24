@@ -40,10 +40,10 @@ export const banner = css`
 
 export const button = css`
   background-color: #f7941d;
-  padding: 10px 0px;
+  padding: 10px 20px;
   box-shadow: 0 0 10px 2px rgba(184, 184, 184, 0.5);
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 20px;
   text-decoration: none;
   text-align: center;
 
@@ -82,6 +82,7 @@ export const name = css`
   font-size: 30px;
   font-weight: bold;
   padding-left: 25px;
+  font-style: oblique;
 `;
 
 export const nameLetters = (index) => css`
