@@ -12,7 +12,7 @@ const variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.5, when: 'beforeChildren' },
+    transition: { delayChildren: 0, when: 'beforeChildren' },
   },
 };
 
@@ -25,7 +25,7 @@ const variantsChildren = {
       divide -= Math.floor(divide);
     }
 
-    const delay = 0.4 * (divide * list);
+    const delay = 2 + 0.4 * (divide * list);
     return {
       opacity: 1,
       transition: {
@@ -43,8 +43,8 @@ function App() {
       <div css={styles.banner}>
       <div css={styles.imageWrapper}>
         <motion.img
-          animate={{x: 50, y: 50, rotate: 360}}
-          transition={{ duration: 2 }}
+          animate={{x: 40, y: 40, rotate: 180}}
+          transition={{ duration: 1 }}
           // variants={variants}
           // drag
           // dragConstraints={{

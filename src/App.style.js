@@ -85,9 +85,13 @@ export const name = css`
     padding-left: 25px;
 `;
 
+const textAnimationDelay = (index) => {
+    return  `${(1 + index / 10) + "s"}`;
+}
+
 export const nameLetters = (index) => css`
-    animation: ${textAnimate} 0.75s forwards;
-    animation-delay: ${(0.5 + index / 10) + "s"};
+    animation: ${textAnimate} 1s forwards;
+    animation-delay: ${textAnimationDelay(index)};
     position: relative;
     opacity: 0;
 `;
