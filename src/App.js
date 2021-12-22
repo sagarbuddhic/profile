@@ -7,6 +7,7 @@ import "./App.css";
 import * as styles from "./App.style";
 import sagar from "./SAGAR_3.jpg";
 
+// comment
 const variants = {
   hidden: { opacity: 0 },
   visible: {
