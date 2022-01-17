@@ -19,7 +19,7 @@ const variants = {
 const variantsChildren = {
   hidden: { opacity: 0 },
   visible: (index) => {
-    const list = 3;
+    const list = 4;
     let divide = index / list;
     if (divide > 1) {
       divide -= Math.floor(divide);
@@ -124,6 +124,21 @@ function App() {
               css={styles.links}
             >
               Github
+            </a>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={variantsChildren}
+            css={styles.button}
+            custom="4"
+          >
+            <a
+              href="https://www.canva.com/design/DADot2ZYU-4/wZKoRsqNk1jMER9MkEgfKg/view?utm_content=DADot2ZYU-4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+              type="button"
+              css={styles.links}
+            >
+              Resume
             </a>
           </motion.div>
         </motion.div>
