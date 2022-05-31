@@ -12,7 +12,7 @@ const variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { delayChildren: 0, when: 'beforeChildren' },
+    transition: { delayChildren: 0, when: "beforeChildren" },
   },
 };
 
@@ -41,28 +41,27 @@ function App() {
   return (
     <div css={styles.container}>
       <div css={styles.banner}>
-      <div css={styles.imageWrapper}>
-        <motion.img
-          animate={{x: 40, y: 40, rotate: 180}}
-          transition={{ duration: 1 }}
-          // variants={variants}
-          // drag
-          // dragConstraints={{
-          //   top: -10,
-          //   left: -10,
-          //   right: 100,
-          //   bottom: 50,
-          // }}
-          // dragElastic={1}
-          css={styles.circle}
-          src={sagar}
-          alt="sagar"
-        >
-        </motion.img>
-        <span css={styles.name}>
-        {[...name].map((char, index) => {
-  
-          return (<span
+        <div css={styles.imageWrapper}>
+          <motion.img
+            animate={{ x: 40, y: 40, rotate: 180 }}
+            transition={{ duration: 1 }}
+            // variants={variants}
+            // drag
+            // dragConstraints={{
+            //   top: -10,
+            //   left: -10,
+            //   right: 100,
+            //   bottom: 50,
+            // }}
+            // dragElastic={1}
+            css={styles.circle}
+            src={sagar}
+            alt="sagar"
+          ></motion.img>
+          <span css={styles.name}>
+            {[...name].map((char, index) => {
+              return (
+                <span
                   aria-hidden="true"
                   key={index}
                   css={styles.nameLetters(index)}
@@ -96,7 +95,7 @@ function App() {
               Stackoverflow
             </a>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             animate="visible"
             variants={variantsChildren}
@@ -110,7 +109,7 @@ function App() {
             >
               Linkedin
             </a>
-          </motion.div>
+          </motion.div> */}
           <motion.div
             initial="hidden"
             animate="visible"
