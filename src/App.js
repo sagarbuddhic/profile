@@ -80,21 +80,21 @@ function App() {
           variants={variants}
           css={styles.linksContainer}
         >
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variantsChildren}
-            css={styles.button}
-            custom="1"
+          <a
+            href="https://stackoverflow.com/users/2951503/sagar-buddhi"
+            css={styles.links}
+            type="button"
           >
-            <a
-              href="https://stackoverflow.com/users/2951503/sagar-buddhi"
-              css={styles.links}
-              type="button"
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={variantsChildren}
+              css={styles.button}
+              custom="1"
             >
               Stackoverflow
-            </a>
-          </motion.div>
+            </motion.div>
+          </a>
           {/* <motion.div
             initial="hidden"
             animate="visible"
@@ -110,36 +110,36 @@ function App() {
               Linkedin
             </a>
           </motion.div> */}
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variantsChildren}
-            css={styles.button}
-            custom="3"
+          <a
+            href="https://github.com/sagarbuddhic"
+            type="button"
+            css={styles.links}
           >
-            <a
-              href="https://github.com/sagarbuddhic"
-              type="button"
-              css={styles.links}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={variantsChildren}
+              css={styles.button}
+              custom="3"
             >
               Github
-            </a>
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variantsChildren}
-            css={styles.button}
-            custom="4"
+            </motion.div>
+          </a>
+          <a
+            href="https://www.canva.com/design/DADot2ZYU-4/wZKoRsqNk1jMER9MkEgfKg/view?utm_content=DADot2ZYU-4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+            type="button"
+            css={styles.links}
           >
-            <a
-              href="https://www.canva.com/design/DADot2ZYU-4/wZKoRsqNk1jMER9MkEgfKg/view?utm_content=DADot2ZYU-4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-              type="button"
-              css={styles.links}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={variantsChildren}
+              css={styles.button}
+              custom="4"
             >
               Resume
-            </a>
-          </motion.div>
+            </motion.div>
+          </a>
         </motion.div>
         <div></div>
       </div>
