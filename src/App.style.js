@@ -59,6 +59,7 @@ export const links = css`
   text-decoration: none;
   font-weight: bold;
   color: whitesmoke;
+  width: 270px;
 `;
 
 export const circle = css`

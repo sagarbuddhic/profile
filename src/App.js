@@ -141,7 +141,6 @@ function App() {
             </motion.div>
           </a>
         </motion.div>
-        <div></div>
       </div>
     </div>
   );
