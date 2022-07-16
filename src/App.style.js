@@ -2,9 +2,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx, keyframes } from "@emotion/react";
+import backGround from "./aus_scene.jpg";
 
 export const container = css`
-  background-color: white;
+  background-color: bisque;
+  height: 100vh;
 `;
 
 export const appHeader = css`
@@ -34,12 +36,13 @@ export const linksContainer = css`
 export const banner = css`
   width: 100%;
   height: 250px;
-  background-color: #3500d3;
+  background: url(${backGround});
+  background-size: 100% 100%;
   border-radius: 0px 0px 0px 50px;
 `;
 
 export const button = css`
-  background-color: #f7941d;
+  background-color: peru;
   padding: 10px 20px;
   box-shadow: 0 0 10px 2px rgba(184, 184, 184, 0.5);
   border-radius: 4px;
@@ -48,7 +51,7 @@ export const button = css`
   text-align: center;
 
   :hover {
-    background-color: #f1b42f;
+    background-color: maroon;
   }
 `;
 
@@ -86,12 +89,12 @@ export const name = css`
 `;
 
 const textAnimationDelay = (index) => {
-    return  `${(1 + index / 10) + "s"}`;
-}
+  return `${1 + index / 10 + "s"}`;
+};
 
 export const nameLetters = (index) => css`
-    animation: ${textAnimate} 1s forwards;
-    animation-delay: ${textAnimationDelay(index)};
-    position: relative;
-    opacity: 0;
+  animation: ${textAnimate} 1s forwards;
+  animation-delay: ${textAnimationDelay(index)};
+  position: relative;
+  opacity: 0;
 `;
